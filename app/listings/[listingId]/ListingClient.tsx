@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Range } from "react-date-range";
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const initialDateRange = {
     startDate: new Date(),
@@ -25,7 +25,7 @@ const initialDateRange = {
 interface ListingClientProps {
     reservations?: SafeReservations[];//we'll have an array ofthem
     listing: safeListings & {
-        user: SafeUser
+        user: SafeUser;
     };
     currentUser?: SafeUser | null;
 }
@@ -44,7 +44,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
         //iterate all reservations and see if we have dates to disable simply because there could be reserved by other user
         let dates: Date[] = [];
 
-        reservations.forEach((reservation) => {
+        reservations.forEach((reservation: any) => {
             const range = eachDayOfInterval({
                 start: new Date(reservation.startDate),
                 end: new Date(reservation.endDate)
@@ -166,7 +166,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
             </div> 
         </div>
     </Container>
-  )
+  );
 }
 
 export default ListingClient

@@ -31,13 +31,13 @@ const RegisterModal = () => {
             //imported from react form which is a function which will have an object of default values where we will
             //set our default values which are name, email, password
             errors,
-        },
+        }
     } = useForm<FieldValues>({
         defaultValues: {
             name: '',
             email: '',
             password: ''
-        },
+        }
     });
 
 const onSubmit: SubmitHandler<FieldValues> = (data) => {
@@ -88,6 +88,7 @@ const toggle = useCallback(() => {
         />
         <Input 
         id='password'
+        type='password'
         label='Password'
         disabled={isLoading}
         required

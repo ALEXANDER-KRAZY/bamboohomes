@@ -1,4 +1,3 @@
-
 //hook that will control if our model is open or closed
 import { create } from 'zustand';
 

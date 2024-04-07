@@ -75,11 +75,16 @@ npm install react-leaflet
 npm install date-fns
 ```
 
-## Update dependeencies
-Had to update nextjs along the development period
+## Accesory Commands
 
 ```bash
-npm i next@latest
+npm i next@latest{/*Had to update nextjs along the development period*/}
+npm run lint{/*to ensure there are no errrors*/}
+{/*PrismaClientInitializationError: Prisma has detected that this project was built on Vercel, which caches dependencies. This leads to an outdated Prisma Client because Prisma's auto-generation isn't triggered. To fix this, make sure to run the `prisma generate` command during the build process.*/}
+{/*Prisma Client Cache: Sometimes, stale cache or temporary files related to the Prisma client generation process can cause issues. Try clearing the cache or deleting the generated client files (node_modules/@prisma/client) and regenerating the Prisma client*}
+npx prisma generate
+npm i --save-dev prisma@latest
+npm i @prisma/client@latest
 ```
 
 ## Social Logins
@@ -90,10 +95,17 @@ settings/Devsettings/OAuthapps/NewAuthApp
 googledeveloperconsole/newproject/api/enableapiandservices/oauthconsentscreen/external/credentials/oauthclientid/authorisedredircturl will be http://localhost:3000/api/auth/callback/google
 
 * cloudinary
-settings/upload/add upload preset/signing mode-unsigned/copypresetname j27novve
+settings/upload/add upload preset/signing mode-unsigned/copypresetname
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Files with errors
+- .gitignore
+- getListingById.ts
+- bamboo.ico favicon
+- rentmodal.tsx
+- trips/page
