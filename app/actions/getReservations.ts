@@ -1,3 +1,5 @@
+//action to disable reserved dates in our calendar
+
 import prisma from "@/app/libs/prismadb";
 
 interface IParams {
@@ -16,7 +18,7 @@ export default async function getReservations(
         
     if (listingId) {
       query.listingId = listingId;
-    };
+    }
 
     if (userId) {
       query.userId = userId;
@@ -29,7 +31,7 @@ export default async function getReservations(
     const reservations = await prisma.reservation.findMany({
       where: query,
       include: {
-        listing: true
+        listing: true,
       },
       orderBy: {
         createdAt: 'desc'
@@ -44,9 +46,10 @@ export default async function getReservations(
       endDate: reservation.endDate.toISOString(),
       listing: {
         ...reservation.listing,
-        createdAt: reservation.listing.createdAt.toISOString(),
-      },
-    }));
+        createdAt: reservation.listing.createdAt.toISOString()
+      }
+    })
+  );
 
     return safeReservations;
   } catch (error: any) {

@@ -73,6 +73,7 @@ npm install world-countries
 npm install -D @types/leaflet
 npm install react-leaflet
 npm install date-fns
+npm install react-spinners
 ```
 
 ## Accesory Commands
@@ -112,7 +113,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## added to package.json
 
+This setup ensures that your Prisma client is up to date with any changes in your schema before you build your Next.js application. It's a common practice to include Prisma client generation as part of the build process to ensure that your application has the latest database access code when deployed
+
 "build": "prisma generate && next build",
 "postinstall": "prisma generate"
-
-This setup ensures that your Prisma client is up to date with any changes in your schema before you build your Next.js application. It's a common practice to include Prisma client generation as part of the build process to ensure that your application has the latest database access code when deployed
