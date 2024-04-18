@@ -102,7 +102,7 @@ settings/upload/add upload preset/signing mode-unsigned/copypresetname
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+First deployment was on 09-April-2024
 
 ## Files with errors
 - .gitignore
@@ -117,3 +117,7 @@ This setup ensures that your Prisma client is up to date with any changes in you
 
 "build": "prisma generate && next build",
 "postinstall": "prisma generate"
+
+## Started project
+
+Started this project on Feb 2024 - 2024
