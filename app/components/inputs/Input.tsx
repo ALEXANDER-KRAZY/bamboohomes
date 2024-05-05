@@ -42,7 +42,7 @@ const Input: React.FC<InputProps> = ({
       <input
       id={id}
       disabled={disabled}
-      {... register(id, { required })}
+      {... register(id, { required })}//validate
       placeholder=" "
       type={type}
       className={`peer

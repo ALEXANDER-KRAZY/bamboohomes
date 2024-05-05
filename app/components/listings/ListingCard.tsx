@@ -35,7 +35,7 @@ const {  getByValue } = useCountries();
 const location = getByValue(data.locationValue);
 
 const handleCancel = useCallback(
-    //set event
+    //set event just as parameter
     (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
 

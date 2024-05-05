@@ -20,11 +20,14 @@ const TripsClient: React.FC<TripsClientProps> = ({
 }) => {
 
     const router = useRouter();
+    //if youll be using seState to DELETE set it to an empty string
     const [deletingId, setDeletingId] = useState('');
-
+    
+    //pass id of string as a parameter to useCallback
     const onCancel = useCallback((id: string) => {
         setDeletingId(id);
-        
+
+        //call axios to perform an HTTP request of delete
         axios.delete(`/api/reservations/${id}`)
         .then (() => {
             toast.success("Reservation cancelled");

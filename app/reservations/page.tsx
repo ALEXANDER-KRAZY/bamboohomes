@@ -19,6 +19,7 @@ const ReservationsPage = async () => {
         );
     }
 
+    //get all reservations on our listings(as the owner of the listing )
     const reservations = await getReservations({
         authorId: currentUser.id
     });

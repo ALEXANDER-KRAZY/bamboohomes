@@ -124,7 +124,6 @@ const Modal: React.FC<ModalProps> = ({
             justify-center
             relative
             border-b-[1px]
-
             ">
               <button
               onClick={handleClose}

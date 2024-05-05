@@ -26,7 +26,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value);
     }, []);
-//TO make sure  if one clicks the airbnb my button is already logged in
+//TO make sure  if one clicks the bamboo my home button is already logged in
     const onRent = useCallback(() => {
       //check if we have a current user and if no, open the login modal
       if (!currentUser) {

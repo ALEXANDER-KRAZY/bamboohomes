@@ -5,15 +5,8 @@ Created using React, Next.js 14 app router, TypeScript, JavaScript, TailwindCSS,
 ## Setup  the environment
 
 /*create your app with the following command*/
-/*or you can use the second command*/
-/*first cmd*/
 ```bash
 npx create-next-app --typescript
-```
-/*second cmd*/
-/*and name the name of your project*/
-```bash
-npx create-next-app@latest ./
 ```
 
 ## Run the development server:
@@ -86,6 +79,7 @@ npm run lint{/*to ensure there are no errrors*/}
 npx prisma generate
 npm i --save-dev prisma@latest
 npm i @prisma/client@latest
+npm run lint //makes sure there are no errors in our app
 ```
 
 ## Social Logins
@@ -120,4 +114,4 @@ This setup ensures that your Prisma client is up to date with any changes in you
 
 ## Started project
 
-Started this project on Feb 2024 - 2024
+Started this project on Feb 2024 - May 2024
