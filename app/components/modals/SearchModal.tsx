@@ -38,7 +38,7 @@ const SearchModal = () => {
 
     const Map = useMemo(() => dynamic(() => import("../Map"), {
     ssr: false, //turn off serversiderendering
-    }), [location]);
+    }), []);
 
     const onBack = useCallback(() => {
       setStep((value) => value -1);
