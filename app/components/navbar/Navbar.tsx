@@ -31,17 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({
           gap-3
           md:gap-0'>
             <Logo />
-            <Search/>
-            <div className="
-            p-2
-            bg-orange-500
-            rounded-full
-            text-white">
-            <MdOutlineConstruction size={50}/>
-            </div>
-            <div className="hidden sm:block bg-red-500 text-white rounded-full">
-                Site under Construction !!!
-            </div>
+            <Search />
             <UserMenu currentUser={currentUser}/>
             </div>
         </Container>
