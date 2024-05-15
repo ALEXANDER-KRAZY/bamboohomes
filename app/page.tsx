@@ -5,8 +5,13 @@ export default function Home() {
   return (
     <ClientOnly>
       <Container>
-        <div>
-          Empty
+        <div className="
+        pt-24
+        
+        ">
+          <div>
+            my future listings
+          </div>
         </div>
       </Container>
     </ClientOnly>
