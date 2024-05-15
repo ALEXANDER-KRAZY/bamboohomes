@@ -50,7 +50,7 @@ export const authOptions: AuthOptions = {
             }
         })
     ],
-    //derirect to the / page if errors occur
+    //redirect to the / page if errors occur
     pages: {
         signIn: '/',
     },
