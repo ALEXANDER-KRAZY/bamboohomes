@@ -1,3 +1,5 @@
+/*
+ * will render this later
 const Terms = () => {
     return (
         <div>
@@ -276,3 +278,4 @@ You agree that the original English text shall prevail in the case of a dispute.
         </div>
     )
 }
+*/
