@@ -1,7 +1,19 @@
 import ClientOnly from "./components/ClientOnly";
 import Container from "./components/Container";
+import EmptyState from "./components/EmptyState";
 
 export default function Home() {
+  //render empty state if there are no listings
+  const isEmpty = true;
+
+  if (isEmpty) {
+    return (
+      <ClientOnly>
+        <EmptyState/>
+      </ClientOnly>
+    )
+  }
+
   return (
     <ClientOnly>
       <Container>
