@@ -2,6 +2,8 @@
 
 Created using React, Next.js 14 app router, TypeScript, JavaScript, TailwindCSS, MongoDB, Node.JS(JavaScript runtime engine), JSX(HTML), Prisma and Cloudinary.
 
+![](/public/bamboolive.png)
+
 ## Setup  the environment
 
 /*create your app with the following command*/
