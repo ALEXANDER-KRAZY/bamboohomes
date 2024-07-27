@@ -4,6 +4,7 @@ import ClientOnly from "../components/ClientOnly";
 import getCurrentUser from "../actions/getCurrentUser";
 import getReservations from "../actions/getReservations";
 import TripsClient from "./TripsClient";
+import CountryStateCitySelect from "./components/inputs/CountryStateCitySelect";
 
 const TripsPage = async () => {//its async so well not need use client
   
@@ -38,6 +39,9 @@ return (
         <TripsClient 
         reservations={reservations}
         currentUser={currentUser}
+        />
+        <CountryStateCitySelect
+        
         />
     </ClientOnly>
 )

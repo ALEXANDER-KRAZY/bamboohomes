@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//create models for the db
+//create models for the database
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   email String? @unique
@@ -74,3 +73,6 @@ model Reservation{
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
   
 }
+
+//first well have client generator from prisma-client-js package
+//also have database source as db from mongodb

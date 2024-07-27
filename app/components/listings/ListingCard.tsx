@@ -34,26 +34,25 @@ const {  getByValue } = useCountries();
 
 const location = getByValue(data.locationValue);
 
+//handleCancel only used in reservations
 const handleCancel = useCallback(
-    //set event just as parameter
     (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.stopPropagation();
+        e.stopPropagation(); //stops the button fro re deleting over and over again
 
         if (disabled) {
             return;
         }
         onAction?.(actionId);
-    }, [onAction, actionId, disabled]
-);
+    }, [onAction, actionId, disabled]);
 
-const price =useMemo(() => {
+const price = useMemo(() => {
     if (reservation) {
         return reservation.totalPrice;
     }
     return data.price;
 }, [data.price, reservation]);
 
-//dates
+//dates only works for reservations
 const reservationDate = useMemo(() => {
     if (!reservation) {
         return null;
@@ -61,8 +60,7 @@ const reservationDate = useMemo(() => {
 
     const start = new Date(reservation.startDate);
     const end = new Date(reservation.endDate);
-
-    //
+    // return a date fns function
     return `${format(start, 'PP')} - ${format(end, 'PP')}`
 }, [reservation]);
   return (

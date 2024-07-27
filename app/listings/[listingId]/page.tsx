@@ -17,7 +17,7 @@ const ListingPage = async ({ params }: { params: IParams }) => {
   const reservations = await getReservations(params);
   const currentUser = await getCurrentUser();
   
-  //if listing is null, import emptystate
+  //if listing is null, show emptystate
   if (!listing) {
     return (
       <ClientOnly>
